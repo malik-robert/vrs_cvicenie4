@@ -128,8 +128,8 @@ uint8_t checkButtonState(GPIO_TypeDef* PORT, uint8_t PIN, uint8_t edge, uint8_t 
 	  //type your code for "checkButtonState" implementation here:
 		uint8_t button_state = 0, timeout = 0;
 
-		while (button_state < samples_required && timeout < samples_window) {
-			button_state = !(PORT->IDR & (1 << PIN)) ? (button_state + 1) : (0);
+		while (button_state <= samples_required && timeout <= samples_window) {
+			button_state = !(PORT->IDR & (1 << PIN)) == edge ? (button_state + 1) : (0);
 			timeout++;
 			LL_mDelay(1);
 		}

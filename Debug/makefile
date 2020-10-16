@@ -46,8 +46,8 @@ vrs_cv3_interrupts.bin \
 all: vrs_cv3_interrupts.elf secondary-outputs
 
 # Tool invocations
-vrs_cv3_interrupts.elf: $(OBJS) $(USER_OBJS) C:\Users\Asus\Desktop\vrs_cvicenie_4-zadanie_cv4\STM32F303K8TX_FLASH.ld
-	arm-none-eabi-gcc -o "vrs_cv3_interrupts.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Asus\Desktop\vrs_cvicenie_4-zadanie_cv4\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv3_interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+vrs_cv3_interrupts.elf: $(OBJS) $(USER_OBJS) C:\Users\legen\OneDrive\Desktop\Skola\vrs_cvicenie_4\STM32F303K8TX_FLASH.ld
+	arm-none-eabi-gcc -o "vrs_cv3_interrupts.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\legen\OneDrive\Desktop\Skola\vrs_cvicenie_4\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv3_interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
